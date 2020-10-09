@@ -101,6 +101,12 @@
             <div class="result-num" v-text="leadvalue"></div>
             <div class="result-subtitle">Expected Revenue</div>
             <div class="result-num" v-text="expectedrev"></div>
+            <div class="result-subtitle">Expected Profit</div>
+            <div class="result-num" v-text="expectedprofit"></div>
+            <div class="return-percent-wrap">
+              <div class="result-subtitle">Return on Ad Spend</div>
+              <div class="result-num"><span v-text="returnpercent"></span>%</div>
+            </div>
           </div>
         </div>
       </div>
@@ -140,6 +146,12 @@ export default {
     },
     expectedrev: function () {
       return (this.leads * this.leadvalue).toFixed()
+    },
+    expectedprofit: function () {
+      return (this.expectedrev - this.adsbudget).toFixed()
+    },
+    returnpercent: function () {
+      return ((this.expectedprofit / this.adsbudget) * 100).toFixed()
     }
   }
 }

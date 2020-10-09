@@ -259,6 +259,20 @@ input[type=range]::-ms-track {
 	    		font-weight: 600;
 	    		display: block;
 	    	}
+	    	.return-percent-wrap {
+	    		background: #e84256;
+	    		margin: 0 -20px;
+	    		padding: 20px 0 0;
+	    		.result-subtitle {
+	    			font-size: 20px;
+	    			color: #fff;
+	    		}
+	    		.result-num {
+	    			color: #fff;
+	    			font-size: 32px;
+	    			font-weight: 600;
+	    		}
+	    	}
 	    }
 	}
 }
