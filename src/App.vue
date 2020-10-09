@@ -1,7 +1,110 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header>
+      <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 910.5 103.5" style="enable-background:new 0 0 910.5 103.5;" xml:space="preserve">
+              <path style="fill: #2f3544;" d="M57,35.5C57,29.1,52.3,25,45.7,25H29.6v21.2h16.1C52.3,46.2,57,42,57,35.5 M55.9,81.4L41.3,56.5H29.6v24.9H17.9 V14.8h29.3c13.2,0,21.9,8.5,21.9,20.9c0,11.8-7.8,18.3-15.9,19.6l16.4,26.2H55.9z"/>
+              <path style="fill: #2f3544;" d="M164,70.4V63c-2.5-3.3-7-5-11.5-5c-5.9,0-10.4,3.5-10.4,8.7c0,5.3,4.5,8.7,10.4,8.7 C157,75.4,161.5,73.7,164,70.4 M164,81.4v-5.3c-3.6,4.2-9.3,6.5-15.7,6.5c-7.8,0-16.7-5.4-16.7-16c0-11.2,8.8-15.8,16.7-15.8 c6.6,0,12.1,2.1,15.7,6.2v-7.2c0-5.6-4.7-9-11.3-9c-5.4,0-10.2,2-14.3,6.2l-4.4-7.3c5.6-5.4,12.6-7.8,20.3-7.8 c10.8,0,20.2,4.5,20.2,17.4v32.1H164z"/>
+              <path style="fill: #2f3544;" d="M218.1,66.8V47.7c-2.3-3.6-7.5-6.5-12.4-6.5c-8.4,0-13.7,6.7-13.7,16c0,9.4,5.3,16.1,13.7,16.1 C210.6,73.3,215.8,70.4,218.1,66.8 M218.1,81.4v-6.6c-3.7,4.8-9.2,7.8-15.5,7.8c-12.3,0-21.4-9.4-21.4-25.4c0-15.6,9-25.3,21.4-25.3 c6.1,0,11.7,2.7,15.5,7.9V14.8h10.5v66.7H218.1z"/>
+              <path id="XMLID_28_" style="fill: #2f3544;" d="M236,75l4.8-7.5c3.4,3.5,10.1,6.7,16.3,6.7c6.3,0,9.6-2.6,9.6-6.4c0-9.5-29.2-2.7-29.2-21.3 c0-7.9,6.8-14.6,19-14.6c8.2,0,14.4,2.9,18.7,6.7l-4.4,7.4c-2.9-3.2-8.2-5.8-14.3-5.8c-5.5,0-8.9,2.6-8.9,6 c0,8.5,29.2,2.1,29.2,21.3c0,8.6-7.1,15.1-20.1,15.1C248.4,82.6,241,79.9,236,75"/>
+              <path style="fill: #2f3544;" d="M285.3,33.1h10.5v48.3h-10.5V33.1z M284.1,20.8c0-3.6,2.9-6.5,6.5-6.5c3.6,0,6.5,2.9,6.5,6.5s-2.9,6.5-6.5,6.5 C287,27.2,284.1,24.3,284.1,20.8"/>
+              <path style="fill: #2f3544;" d="M341.4,66.8V47.7c-2.3-3.6-7.5-6.5-12.4-6.5c-8.4,0-13.7,6.7-13.7,16c0,9.4,5.3,16.1,13.7,16.1 C333.9,73.3,339.1,70.4,341.4,66.8 M341.4,81.4v-6.6c-3.7,4.8-9.2,7.8-15.5,7.8c-12.3,0-21.4-9.4-21.4-25.4c0-15.6,9-25.3,21.4-25.3 c6.1,0,11.7,2.7,15.5,7.9V14.8h10.5v66.7H341.4z"/>
+              <path style="fill: #2f3544;" d="M385,40.5c-8.9,0-13.1,6.9-13.5,12.7h27.2C398.3,47.5,394.4,40.5,385,40.5 M360.6,57.2 c0-14,10.2-25.3,24.5-25.3c14.5,0,23.7,11,23.7,26.2v2.6h-37.2c0.8,7.2,6.2,13.3,15.3,13.3c4.8,0,10.3-1.9,13.8-5.4l4.8,6.9 c-4.9,4.6-12,7.1-19.6,7.1C371.3,82.6,360.6,72.5,360.6,57.2"/>
+              <linearGradient id="logo-gradient" gradientUnits="userSpaceOnUse" x1="81.6822" y1="77.7962" x2="113.5503" y2="38.2357">
+                <stop  offset="0.3206" style="stop-color:#E74355"/>
+                <stop  offset="1" style="stop-color:#EC6335"/>
+              </linearGradient>
+              <path id="XMLID_21_" style="fill: url(#logo-gradient);" d="M104.7,66.8l-3.7,3.7c-0.5,0.5-1.2,0.8-1.9,0.8c-0.7,0-1.4-0.3-1.9-0.8l-3.7-3.7l-9.9-9.9 c-0.5-0.5-0.8-1.2-0.8-1.9c0-0.7,0.3-1.4,0.8-1.9l3.7-3.7c0.5-0.5,1.2-0.8,1.9-0.8c0.7,0,1.4,0.3,1.9,0.8l8.1,8.1l18.1-17.9 c-4.3-4.9-10.6-8-18.6-8c-15.4,0-24.8,11.4-24.8,25.3c0,13.8,9.4,25.4,24.8,25.4c15.4,0,24.8-11.6,24.8-25.4c0-2.7-0.4-5.3-1-7.7 L104.7,66.8z"/>
+              <path style="fill: #2f3544;" d="M887.8,69.7c3.7,0,6.9-1.5,9.1-3.9v-8.2h-10v2.7h6.9v4.3c-1.1,1.1-3.2,2.3-5.9,2.3c-4.9,0-8.6-3.7-8.6-8.8 c0-5.1,3.7-8.8,8.6-8.8c2.7,0,5,1.2,6.5,2.9l2.5-1.7c-2.1-2.4-5-4.1-8.9-4.1c-6.6,0-11.9,4.7-11.9,11.6S881.2,69.7,887.8,69.7 M864.7,69.2V46.9h-3.2v17l-13-17h-3.3v22.2h3.2V51.9l13.1,17.3H864.7z M830.5,46.9h-3.2v22.2h3.2V46.9z M808.4,69.2V49.7h6.9v-2.8 h-16.9v2.8h6.9v19.5H808.4z M786.5,69.2v-2.8h-12.3v-7.2h12.1v-2.8h-12.1v-6.7h12.3v-2.8H771v22.2H786.5z M759.5,69.2l-10.6-11.7 l9.8-10.6h-4l-10,11.1V46.9h-3.2v22.2h3.2v-7.5l2.1-2.3l8.7,9.8H759.5z M720.9,57.8h-6.1v-8h6.1c2.8,0,4.4,1.7,4.4,4 C725.2,56.1,723.8,57.8,720.9,57.8 M728.8,69.2l-6.3-8.9c3.5-0.2,6-2.7,6-6.6c0-3.8-2.7-6.8-7.4-6.8h-9.5v22.2h3.2v-8.7h4.4l5.8,8.7 H728.8z M693.9,61.5h-9.4l4.7-11.3L693.9,61.5z M687.3,46.9l-9.4,22.2h3.6l2.1-4.9h11.4l2.1,4.9h3.5L691,46.9H687.3z M667.4,69.2 V46.9h-4.3l-7.2,16.9l-7.2-16.9h-4.3v22.2h3.2v-18l7.6,18h1.4l7.6-18v18H667.4z M610.4,69.2v-2.8h-10.8V46.9h-3.2v22.2H610.4z M579.5,61.5h-9.4l4.7-11.3L579.5,61.5z M572.9,46.9l-9.4,22.2h3.6l2.1-4.9h11.4l2.1,4.9h3.5l-9.4-22.2H572.9z M549.1,69.2V49.7h6.9 v-2.8H539v2.8h6.9v19.5H549.1z M527,69.2V46.9h-3.2v17l-13-17h-3.3v22.2h3.2V51.9l13.1,17.3H527z M494.5,69.2v-2.8h-12.3v-7.2h12.1 v-2.8h-12.1v-6.7h12.3v-2.8h-15.4v22.2H494.5z M456,66.4h-4.9V49.7h4.9c5.6,0,8.6,3.7,8.6,8.4C464.6,62.7,461.6,66.4,456,66.4 M456,69.2c7.3,0,11.8-4.8,11.8-11.1s-4.6-11.2-11.8-11.2h-8.1v22.2H456z"/>
+            </svg>
+            <span class="sr-only">Roadside Dental Marketing Resources Page</span>
+    </header>
+    <div class="header-spacer"></div>
+    <div class="content-wrap">
+      <div class="calc-inner">
+        <div class="calc-questions">
+          <div class="question-wrap">
+            <input name="ads-budget" type="number" min="100" max="50000" step="100" class="input-number" v-model="adsbudget">
+            <h4 class="question-title">Projected Monthly Budget</h4>
+            <p><strong>How much do you spend a month on digital ads?</strong><br>
+             If you don't spend on ads now, just test out a number, 10% of your total marketing budget is a good place to start. Once you've entered all other metrics, come back to budget to see how it affects profit.</p>
+            <div class="input-range-wrap currency">
+              <input class="input-range" name="ads-budget" v-model="adsbudget" type="range" value="2000" min="100" max="50000" step="100">
+              <div class="input-label-wrap">
+                <p class="input-label">100</p>
+                <p class="input-label">50k</p>
+              </div>
+            </div>
+          </div>
+          <div class="question-wrap">
+            <input name="expectedcpc" type="number" min="0.1" max="50" step="0.1" class="input-number" v-model="expectedcpc">
+            <h4 class="question-title">Expected CPC</h4>
+            <p><strong>How much are you willing to pay for a click?</strong><br>
+             Depending on the ad network and audience, B2B marketers can expect cost-per-click to range from $1-$7 or more. You can use the Google KeyWord Planner for help estimating your CPC for search ads.</p>
+            <div class="input-range-wrap currency">
+              <input class="input-range" name="expectedcpc" v-model="expectedcpc" type="range" min="0.1" max="50" step="0.1">
+              <div class="input-label-wrap">
+                <p class="input-label">0.1</p>
+                <p class="input-label">50</p>
+              </div>
+            </div>
+          </div>
+          <div class="question-wrap">
+            <input name="targetconversion" type="number" min="0.1" max="50" step="0.1" class="input-number" v-model="targetconversion">
+            <h4 class="question-title">Target Conversion Rate</h4>
+            <p><strong>How often does a visitor convert into a lead on your website?</strong><br>
+             For the average for B2B marketers it's around 2.6%. Check out these 10 Tips to improve your conversion rate (CVR).</p>
+            <div class="input-range-wrap percent">
+              <input class="input-range" name="targetconversion" v-model="targetconversion" type="range" min="0.1" max="50" step="0.1">
+              <div class="input-label-wrap">
+                <p class="input-label">0.1</p>
+                <p class="input-label">50</p>
+              </div>
+            </div>
+          </div>
+          <div class="question-wrap">
+            <input name="avgprice" type="number" min="100" max="100000" step="100" class="input-number" v-model="avgprice">
+            <h4 class="question-title">Average Sale Price</h4>
+            <p><strong>On average, how valuable is a single customer?</strong><br>
+             For many companies this number may vary or increase over time. Test different options, such as a new customer vs. the lifetime value of a customer.</p>
+            <div class="input-range-wrap currency">
+              <input class="input-range" name="avgprice" v-model="avgprice" type="range" min="100" max="100000" step="100">
+              <div class="input-label-wrap">
+                <p class="input-label">100</p>
+                <p class="input-label">100k</p>
+              </div>
+            </div>
+          </div>
+          <div class="question-wrap">
+            <input name="custrate" type="number" min="1" max="90" step="1" class="input-number" v-model="custrate">
+            <h4 class="question-title">Lead to Customer Rate</h4>
+            <p><strong>What percentage of your leads turn into Customers?</strong><br>
+             This is crtical to monitor. Talk to sales and make sure the leads you deliver are top notch. Increasing lead to customer rate can drastically improve the ROI of your ads 10 Tips to align sales and marketing.</p>
+            <div class="input-range-wrap currency">
+              <input class="input-range" name="custrate" v-model="custrate" type="range" min="1" max="90" step="1">
+              <div class="input-label-wrap">
+                <p class="input-label">1</p>
+                <p class="input-label">90</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="calc-results">
+          <div class="result-box">
+            <div class="result-title">Results</div>
+            <div class="result-subtitle">Number of Clicks</div>
+            <div class="result-num" v-text="clicks"></div>
+            <div class="result-subtitle">Number of Leads</div>
+            <div class="result-num" v-text="leads"></div>
+            <div class="result-subtitle">Cost-Per-Lead</div>
+            <div class="result-num" v-text="costper"></div>
+            <div class="result-subtitle">Value of Lead</div>
+            <div class="result-num" v-text="leadvalue"></div>
+            <div class="result-subtitle">Expected Revenue</div>
+            <div class="result-num" v-text="expectedrev"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -12,17 +115,32 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  data() {
+    return {
+      adsbudget: 100,
+      expectedcpc: 5,
+      targetconversion: 10,
+      avgprice: 1000,
+      custrate: 10
+    }
+  },
+  computed: {
+    clicks: function () {
+      return (this.adsbudget / this.expectedcpc).toFixed() 
+    },
+    leads: function () {
+      return (this.clicks * .10).toFixed()
+    },
+    costper: function () {
+      return (this.expectedcpc * this.targetconversion).toFixed()
+    },
+    leadvalue: function () {
+      return (this.avgprice * (this.targetconversion / 100)).toFixed()
+    },
+    expectedrev: function () {
+      return (this.leads * this.leadvalue).toFixed()
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
