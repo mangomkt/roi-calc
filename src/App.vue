@@ -79,7 +79,7 @@
             <h4 class="question-title">Lead to Customer Rate</h4>
             <p><strong>What percentage of your leads turn into Customers?</strong><br>
              This is crtical to monitor. Talk to sales and make sure the leads you deliver are top notch. Increasing lead to customer rate can drastically improve the ROI of your ads 10 Tips to align sales and marketing.</p>
-            <div class="input-range-wrap currency">
+            <div class="input-range-wrap percent">
               <input class="input-range" name="custrate" v-model="custrate" type="range" min="1" max="90" step="1">
               <div class="input-label-wrap">
                 <p class="input-label">1</p>
@@ -136,7 +136,7 @@ export default {
       return (this.adsbudget / this.expectedcpc).toFixed() 
     },
     leads: function () {
-      return (this.clicks * .10).toFixed()
+      return ((this.clicks * this.custrate) / 100).toFixed()
     },
     costper: function () {
       return (this.expectedcpc * this.targetconversion).toFixed()
