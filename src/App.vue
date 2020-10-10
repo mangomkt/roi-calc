@@ -24,9 +24,9 @@
         <div class="calc-questions">
           <div class="question-wrap">
             <input name="ads-budget" type="number" min="100" max="50000" step="100" class="input-number" v-model="adsbudget">
-            <h4 class="question-title">Projected Monthly Budget</h4>
-            <p><strong>How much do you spend a month on digital ads?</strong><br>
-             If you don't spend on ads now, just test out a number, 10% of your total marketing budget is a good place to start. Once you've entered all other metrics, come back to budget to see how it affects profit.</p>
+            <h4 class="question-title">Estimated Monthly Budget</h4>
+            <p><strong>How much do you or are you planning on spending each month on paid ads?</strong><br>
+             If you are just kicking tires, simply test out a number. The industry average is 10% of your monthly marketing budget.</p>
             <div class="input-range-wrap currency">
               <input class="input-range" name="ads-budget" v-model="adsbudget" type="range" value="2000" min="100" max="50000" step="100">
               <div class="input-label-wrap">
@@ -37,9 +37,9 @@
           </div>
           <div class="question-wrap">
             <input name="expectedcpc" type="number" min="0.1" max="50" step="0.1" class="input-number" v-model="expectedcpc">
-            <h4 class="question-title">Expected CPC</h4>
-            <p><strong>How much are you willing to pay for a click?</strong><br>
-             Depending on the ad network and audience, B2B marketers can expect cost-per-click to range from $1-$7 or more. You can use the Google KeyWord Planner for help estimating your CPC for search ads.</p>
+            <h4 class="question-title">Estimated CPC</h4>
+            <p><strong>How much do you estimate each click will cost you in your area?</strong><br>
+             Depending on the ad network, and audience your CPC (Cost-Per-Click) can range from $2 to $30+.</p>
             <div class="input-range-wrap currency">
               <input class="input-range" name="expectedcpc" v-model="expectedcpc" type="range" min="0.1" max="50" step="0.1">
               <div class="input-label-wrap">
@@ -52,7 +52,7 @@
             <input name="targetconversion" type="number" min="0.1" max="50" step="0.1" class="input-number" v-model="targetconversion">
             <h4 class="question-title">Target Conversion Rate</h4>
             <p><strong>How often does a visitor convert into a lead on your website?</strong><br>
-             For the average for B2B marketers it's around 2.6%. Check out these 10 Tips to improve your conversion rate (CVR).</p>
+             For the average practice it is around 3-5%.</p>
             <div class="input-range-wrap percent">
               <input class="input-range" name="targetconversion" v-model="targetconversion" type="range" min="0.1" max="50" step="0.1">
               <div class="input-label-wrap">
@@ -63,9 +63,9 @@
           </div>
           <div class="question-wrap">
             <input name="avgprice" type="number" min="100" max="100000" step="100" class="input-number" v-model="avgprice">
-            <h4 class="question-title">Average Sale Price</h4>
+            <h4 class="question-title">Average Patient Value (Lifetime of Patient)</h4>
             <p><strong>On average, how valuable is a single customer?</strong><br>
-             For many companies this number may vary or increase over time. Test different options, such as a new customer vs. the lifetime value of a customer.</p>
+              For many practices this will depend on what type of service you are advertising for. In general the LTV for a traditional dental patient is $5000. For more specific treatments like Dental Implants, or Invisalign you can use the average one-time gross treatment cost.</p>
             <div class="input-range-wrap currency">
               <input class="input-range" name="avgprice" v-model="avgprice" type="range" min="100" max="100000" step="100">
               <div class="input-label-wrap">
@@ -76,9 +76,9 @@
           </div>
           <div class="question-wrap">
             <input name="custrate" type="number" min="1" max="90" step="1" class="input-number" v-model="custrate">
-            <h4 class="question-title">Lead to Customer Rate</h4>
+            <h4 class="question-title">What percentage of your leads turn into Customers?</h4>
             <p><strong>What percentage of your leads turn into Customers?</strong><br>
-             This is crtical to monitor. Talk to sales and make sure the leads you deliver are top notch. Increasing lead to customer rate can drastically improve the ROI of your ads 10 Tips to align sales and marketing.</p>
+             This is critical to monitor. Talk to your front-desk and make sure the leads you receive are top-notch and well qualified. The industry average is 20% for Lead to Patient conversion.</p>
             <div class="input-range-wrap percent">
               <input class="input-range" name="custrate" v-model="custrate" type="range" min="1" max="90" step="1">
               <div class="input-label-wrap">
@@ -115,12 +115,20 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  metaInfo: {
+    title: 'Estimate Your Paid Ads ROI Online | Paid Ad Calculator',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        vmid: 'description',
+        name: 'description',
+        content: 'Ever wonder if you should be running paid ads? Find out what your ROI could be in seconds with our paid ad calculator.',
+      }
+    ]
   },
   data() {
     return {
