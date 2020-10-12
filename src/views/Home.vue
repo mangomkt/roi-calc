@@ -5,21 +5,21 @@
         <div class="calc-questions">
           <div class="question-wrap">
             <span class="input-number currency">
-              <input name="ads-budget" type="number" min="100" max="15000" step="100" v-model="adsbudget">
+              <input name="ads-budget" type="number" min="500" max="15000" step="100" v-model="adsbudget">
             </span>
             <h4 class="question-title">Estimated Monthly Budget</h4>
             <p><strong>How much do you or are you planning on spending each month on paid ads?</strong><br>
              If you are just kicking tires, simply test out a number. The industry average is 10% of your monthly marketing budget.</p>
             <div class="input-range-wrap currency">
-              <input class="input-range" name="ads-budget" v-model="adsbudget" type="range"  min="100" max="15000" step="100">
+              <input class="input-range" name="ads-budget" v-model="adsbudget" type="range"  min="500" max="15000" step="100">
               <div class="input-label-wrap">
-                <p class="input-label">100</p>
+                <p class="input-label">500</p>
                 <p class="input-label">15k</p>
               </div>
             </div>
           </div>
           <div class="question-wrap">
-            <span class="input-number">
+            <span class="input-number currency">
               <input name="expectedcpc" type="number" min="0.1" max="50" step="0.1" class="input-number" v-model="expectedcpc">
             </span>
             <h4 class="question-title">Estimated CPC</h4>
@@ -142,7 +142,7 @@ export default {
   },
   data() {
     return {
-      adsbudget: 100,
+      adsbudget: 500,
       expectedcpc: 5,
       targetconversion: 10,
       avgprice: 1000,
@@ -230,12 +230,12 @@ export default {
       doc.setFontSize(16).setTextColor("#353b48").text(this.clicks, 6.5, 2.5, {align: "center", maxWidth: 3});
       doc.setFontSize(12).setTextColor("#353b48").text("Number of Leads", 6.5, 3, {align: "center", maxWidth: 3});
       doc.setFontSize(16).setTextColor("#353b48").text(this.leads, 6.5, 3.3, {align: "center", maxWidth: 3});
-      doc.setFontSize(12).setTextColor("#353b48").text("$" + "Cost-Per-Lead", 6.5, 3.8, {align: "center", maxWidth: 3});
-      doc.setFontSize(16).setTextColor("#353b48").text(this.costper, 6.5, 4.1, {align: "center", maxWidth: 3});
-      doc.setFontSize(12).setTextColor("#353b48").text("$" + "Value of Lead", 6.5, 4.6, {align: "center", maxWidth: 3});
-      doc.setFontSize(16).setTextColor("#353b48").text(this.leadvalue, 6.5, 4.9, {align: "center", maxWidth: 3});
-      doc.setFontSize(12).setTextColor("#353b48").text("$" + "Expected Revenue", 6.5, 5.4, {align: "center", maxWidth: 3});
-      doc.setFontSize(16).setTextColor("#353b48").text(this.expectedrev, 6.5, 5.7, {align: "center", maxWidth: 3});
+      doc.setFontSize(12).setTextColor("#353b48").text("Cost-Per-Lead", 6.5, 3.8, {align: "center", maxWidth: 3});
+      doc.setFontSize(16).setTextColor("#353b48").text("$" + this.costper, 6.5, 4.1, {align: "center", maxWidth: 3});
+      doc.setFontSize(12).setTextColor("#353b48").text("Value of Lead", 6.5, 4.6, {align: "center", maxWidth: 3});
+      doc.setFontSize(16).setTextColor("#353b48").text("$" + this.leadvalue, 6.5, 4.9, {align: "center", maxWidth: 3});
+      doc.setFontSize(12).setTextColor("#353b48").text("Expected Revenue", 6.5, 5.4, {align: "center", maxWidth: 3});
+      doc.setFontSize(16).setTextColor("#353b48").text("$" + this.expectedrev, 6.5, 5.7, {align: "center", maxWidth: 3});
       doc.setFontSize(12).setTextColor("#353b48").text("Expected Profit", 6.5, 6.2, {align: "center", maxWidth: 3});
       doc.setFontSize(16).setTextColor("#353b48").text("$" + this.expectedprofit, 6.5, 6.5, {align: "center", maxWidth: 3});
       doc.setFillColor("#e84256").rect(5,7,3,1, 'F');
