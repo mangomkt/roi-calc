@@ -125,7 +125,6 @@
 
 <script>
 import { jsPDF } from "jspdf";
-import html2canvas from "html2canvas"
 
 export default {
   name: 'App',
@@ -242,7 +241,7 @@ export default {
       doc.setFillColor("#e84256").rect(5,7,3,1, 'F');
       doc.setFontSize(16).setTextColor("#FFFFFF").text("Return on Ad Spend", 6.5, 7.4, {align: "center", maxWidth: 3});
       doc.setFont("Helvetica", "bold").setFontSize(24).setTextColor("#FFFFFF").text(this.returnpercent + "%", 6.5, 7.8, {align: "center", maxWidth: 3});
-      doc.save();
+      doc.save("paid-ads-roi-estimate.pdf");
     }
   }
 }
