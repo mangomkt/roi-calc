@@ -4,20 +4,24 @@
       <div class="calc-inner">
         <div class="calc-questions">
           <div class="question-wrap">
-            <input name="ads-budget" type="number" min="100" max="50000" step="100" class="input-number" v-model="adsbudget">
+            <span class="input-number currency">
+              <input name="ads-budget" type="number" min="100" max="15000" step="100" v-model="adsbudget">
+            </span>
             <h4 class="question-title">Estimated Monthly Budget</h4>
             <p><strong>How much do you or are you planning on spending each month on paid ads?</strong><br>
              If you are just kicking tires, simply test out a number. The industry average is 10% of your monthly marketing budget.</p>
             <div class="input-range-wrap currency">
-              <input class="input-range" name="ads-budget" v-model="adsbudget" type="range" value="2000" min="100" max="50000" step="100">
+              <input class="input-range" name="ads-budget" v-model="adsbudget" type="range"  min="100" max="15000" step="100">
               <div class="input-label-wrap">
                 <p class="input-label">100</p>
-                <p class="input-label">50k</p>
+                <p class="input-label">15k</p>
               </div>
             </div>
           </div>
           <div class="question-wrap">
-            <input name="expectedcpc" type="number" min="0.1" max="50" step="0.1" class="input-number" v-model="expectedcpc">
+            <span class="input-number">
+              <input name="expectedcpc" type="number" min="0.1" max="50" step="0.1" class="input-number" v-model="expectedcpc">
+            </span>
             <h4 class="question-title">Estimated CPC</h4>
             <p><strong>How much do you estimate each click will cost you in your area?</strong><br>
              Depending on the ad network, and audience your CPC (Cost-Per-Click) can range from $2 to $30+.</p>
@@ -30,7 +34,9 @@
             </div>
           </div>
           <div class="question-wrap">
-            <input name="targetconversion" type="number" min="0.1" max="50" step="0.1" class="input-number" v-model="targetconversion">
+            <span class="input-number percent">
+              <input name="targetconversion" type="number" min="0.1" max="50" step="0.1" class="input-number" v-model="targetconversion">
+            </span>
             <h4 class="question-title">Target Conversion Rate</h4>
             <p><strong>How often does a visitor convert into a lead on your website?</strong><br>
              For the average practice it is around 3-5%.</p>
@@ -43,7 +49,9 @@
             </div>
           </div>
           <div class="question-wrap">
-            <input name="avgprice" type="number" min="100" max="100000" step="100" class="input-number" v-model="avgprice">
+            <span class="input-number currency">
+              <input name="avgprice" type="number" min="100" max="100000" step="100" class="input-number" v-model="avgprice">
+            </span>
             <h4 class="question-title">Average Patient Value (Lifetime of Patient)</h4>
             <p><strong>On average, how valuable is a single customer?</strong><br>
               For many practices this will depend on what type of service you are advertising for. In general the LTV for a traditional dental patient is $5000. For more specific treatments like Dental Implants, or Invisalign you can use the average one-time gross treatment cost.</p>
@@ -56,8 +64,10 @@
             </div>
           </div>
           <div class="question-wrap">
-            <input name="custrate" type="number" min="1" max="90" step="1" class="input-number" v-model="custrate">
-            <h4 class="question-title">What percentage of your leads turn into Customers?</h4>
+            <span class="input-number percent">
+              <input name="custrate" type="number" min="1" max="90" step="1" class="input-number" v-model="custrate">
+            </span>
+            <h4 class="question-title">What Percentage of Your Leads Turn into Customers?</h4>
             <p><strong>What percentage of your leads turn into Customers?</strong><br>
              This is critical to monitor. Talk to your front-desk and make sure the leads you receive are top-notch and well qualified. The industry average is 20% for Lead to Patient conversion.</p>
             <div class="input-range-wrap percent">
@@ -74,17 +84,17 @@
             <div class="result-details">
               <div class="result-title">Results</div>
               <div class="result-subtitle">Number of Clicks</div>
-              <div class="result-num" v-text="clicks"></div>
+              <div class="result-num"><span v-text="clicks"></span></div>
               <div class="result-subtitle">Number of Leads</div>
-              <div class="result-num" v-text="leads"></div>
+              <div class="result-num"><span v-text="leads"></span></div>
               <div class="result-subtitle">Cost-Per-Lead</div>
-              <div class="result-num" v-text="costper"></div>
+              <div class="result-num">$<span v-text="costper"></span></div>
               <div class="result-subtitle">Value of Lead</div>
-              <div class="result-num" v-text="leadvalue"></div>
+              <div class="result-num">$<span v-text="leadvalue"></span></div>
               <div class="result-subtitle">Expected Revenue</div>
-              <div class="result-num" v-text="expectedrev"></div>
+              <div class="result-num">$<span v-text="expectedrev"></span></div>
               <div class="result-subtitle">Expected Profit</div>
-              <div class="result-num" v-text="expectedprofit"></div>
+              <div class="result-num">$<span v-text="expectedprofit"></span></div>
             </div>
             <div class="return-percent-wrap">
               <div class="result-subtitle">Return on Ad Spend</div>
@@ -180,7 +190,7 @@ export default {
       return ((this.expectedprofit / this.adsbudget) * 100).toFixed()
     },
     sharelink() {
-      return `https://roi.roadsidedentalmarketing.com/?budget=${encodeURIComponent(this.adsbudget)}&cpc=${encodeURIComponent(this.expectedcpcp)}&targetconv=${encodeURIComponent(this.targetconversion)}&priceavg=${encodeURIComponent(this.avgprice)}&rate=${encodeURIComponent(this.custrate)}`;
+      return `https://roi.roadsidedentalmarketing.com/?budget=${encodeURIComponent(this.adsbudget)}&cpc=${encodeURIComponent(this.expectedcpc)}&targetconv=${encodeURIComponent(this.targetconversion)}&priceavg=${encodeURIComponent(this.avgprice)}&rate=${encodeURIComponent(this.custrate)}`;
     },
   },
   methods: {

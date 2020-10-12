@@ -98,13 +98,42 @@ input[type=range]::-ms-track {
 	    		padding: 0;
 	    		font-weight: 600;
 	    		color: #34495e;
-	    		-webkit-appearance: textfield;
-			    -moz-appearance: textfield;
-			    appearance: textfield;
-			    &::-webkit-outer-spin-button,
-				&::-webkit-inner-spin-button {
-				  -webkit-appearance: none;
-				  margin: 0 3px;
+	    		input {
+	    			font-size: 24px;
+	    			padding: 0;
+	    			height: 30px;
+	    			text-align: right;
+	    			border: none;
+	    			outline: none;
+		    		-webkit-appearance: textfield;
+				    -moz-appearance: textfield;
+				    appearance: textfield;
+				    &::-webkit-outer-spin-button,
+					&::-webkit-inner-spin-button {
+					  -webkit-appearance: none;
+					  margin: 0 3px;
+					}
+				}
+				&.currency {
+					&:before {
+						content: "$";
+						position: absolute;
+						left: 0;
+						top: 0;
+						z-index: 1;
+					}
+				}
+				&.percent {
+					input {
+						padding-right: 20px;
+					}
+					&:before {
+						content: "%";
+						position: absolute;
+						right: 0;
+						top: 0;
+						z-index: 1;
+					}
 				}
 				@media(max-width:767px) {
 					position: relative;
