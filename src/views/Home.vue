@@ -220,9 +220,9 @@ export default {
       doc.setLineWidth(0.01).setFillColor("#e84256").line(0.5, 1.1, 8.0, 1.1, 'F');
       doc.setFontSize(16).setTextColor("#353b48").text("Estimated Monthly Budget: $" + this.adsbudget, 0.5,1.75);
       doc.setFontSize(16).setTextColor("#353b48").text("Estimated CPC: " + this.expectedcpc, 0.5,2.15);
-      doc.setFontSize(16).setTextColor("#353b48").text("Target Conversion Rate: " + this.targetconversion, 0.5,2.45);
-      doc.setFontSize(16).setTextColor("#353b48").text("Average Patient Value: $" + this.avgprice, 0.5,2.75);
-      doc.setFontSize(16).setTextColor("#353b48").text("Percentage to leads: " + this.custrate + "%", 0.5,3.05);
+      doc.setFontSize(16).setTextColor("#353b48").text("Target Conversion Rate: " + this.targetconversion, 0.5,2.55);
+      doc.setFontSize(16).setTextColor("#353b48").text("Average Patient Value: $" + this.avgprice, 0.5,2.95);
+      doc.setFontSize(16).setTextColor("#353b48").text("Percentage to leads: " + this.custrate + "%", 0.5,3.35);
       doc.setFillColor("#f9f9f9").rect(5,1.3,3,6, 'F');
       doc.setFontSize(14).setTextColor("#353b48").text("Results:", 6.5, 1.75, {align: "center", maxWidth: 3});
       doc.setLineWidth(0.01).setFillColor("#b9b9b9").line(5.5, 1.85, 7.5, 1.85, 'F');
