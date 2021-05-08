@@ -7,16 +7,21 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "jspdf": "^2.1.1",
+    "core-js": "^3.12.0",
+    "elliptic": "^6.5.4",
+    "highlight.js": "^10.7.2",
+    "jspdf": "^2.3.1",
+    "ssri": "^8.0.1",
+    "url-parse": "^1.5.1",
     "vue": "^2.6.11",
     "vue-meta": "^2.4.0",
-    "vue-router": "^3.4.6",
-    "vue-toasted": "^1.1.28"
+    "vue-router": "^3.5.1",
+    "vue-toasted": "^1.1.28",
+    "y18n": "^5.0.8"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
+    "@vue/cli-service": "^4.5.13",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
     "vue-template-compiler": "^2.6.11",
